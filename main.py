@@ -1,1 +1,1 @@
-print("among us")
+import trivia_main

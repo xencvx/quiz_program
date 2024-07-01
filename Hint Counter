@@ -1,0 +1,37 @@
+class Quiz:
+    def __init__(self, questions_and_hints):
+        self.questions_and_hints = questions_and_hints
+        self.hint_count = 3
+
+    def ask_question(self):
+        for question, hints in self.questions_and_hints:
+            self.hint_count = 3  # Reset hint count for each new question
+            print(f"Question: {question}")
+            while True:
+                answer = input("Your answer: ").strip().lower()
+                if answer == "hint":
+                    if self.hint_count > 0:
+                        self.hint_count -= 1
+                        print(f"Hint: {hints[self.hint_count]}")
+                    else:
+                        print("You are out of hints!")
+                else:
+                    # Assume the correct answer is the last hint in the list
+                    correct_answer = hints[-1].lower()
+                    if answer == correct_answer:
+                        print("Correct!")
+                    else:
+                        print("Incorrect. Try again or type 'hint' for a hint.")
+                        continue
+                break  # Break out of the answer loop and proceed to the next question
+
+
+# Example usage:
+questions_and_hints = [
+    ("What is the capital of France?", ["It's in Europe.", "It starts with 'P'.", "Paris"]),
+    ("Who wrote 'Romeo and Juliet'?", ["It's a famous playwright.", "Starts with 'S'.", "Shakespeare"]),
+    ("What is the largest planet in our solar system?", ["It's a gas giant.", "Starts with 'J'.", "Jupiter"])
+]
+
+quiz = Quiz(questions_and_hints)
+quiz.ask_question()
