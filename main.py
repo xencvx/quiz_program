@@ -1,1 +1,1 @@
-import trivia_main
+import hint_counter
