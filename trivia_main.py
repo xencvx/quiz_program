@@ -168,6 +168,7 @@ def trivia_quiz():
     print("        TRIVIA COMPLETED!")
     print("──────────────────────────────────")
     print(f"SOCRE: You got: {score} / {num_questions_value} questions correct!.")
+    print(f"You used {hint_count} /3")
     print(f"PAYOUT: You earned: ${total_payout}.")
 
 # MAIN CONSOLE:
