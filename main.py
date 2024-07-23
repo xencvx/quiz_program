@@ -1,1 +1,1 @@
-import hint_counter
+import trivia_main.py
