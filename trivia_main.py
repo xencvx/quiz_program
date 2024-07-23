@@ -106,8 +106,6 @@ def trivia_quiz():
         
         "What is the most hottest planet within our solar system?": { 
         "answer":"Venus", "hints":["Earths sister planet \n","Second planet from the sun \n", "This planet rotates the oppisite direction of other planets \n"]}}
-        
-
 
     
     # User input for number of questions
